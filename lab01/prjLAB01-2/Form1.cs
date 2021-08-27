@@ -21,5 +21,20 @@ namespace prjLAB01_2
         {
 
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            string codigo = lblCodigo.Text;
+            string dni = txtDNI.Text;
+            string nombre = txtNombre.Text;
+            string apellido = txtApellido.Text;
+            string direccion = txtDireccion.Text;
+            string telefono = txtTelefono.Text;
+            string email = txtEmail.Text;
+            string fec_nac = dtpFechaNac.Text;
+            string departamento = cmbDepartamento.Text;
+
+            dgvUsuarios.Rows.Add(codigo, dni, nombre, apellido, direccion, telefono, email, fec_nac, departamento);
+        }
     }
 }

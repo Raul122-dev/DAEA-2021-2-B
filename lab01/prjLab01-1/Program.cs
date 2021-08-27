@@ -48,7 +48,7 @@ namespace prjLab01_1
                 cont = 0;
             }
         }
-        //Funcion para convertir de Celsius a Fahrenheit
+        //Funcion para convertir Temperatura
         static void Conversion_Temperatura(int op, int a)
         {
             int convertido;
