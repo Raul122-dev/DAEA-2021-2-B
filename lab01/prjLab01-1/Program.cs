@@ -28,6 +28,26 @@ namespace prjLab01_1
         {
             return Convert.ToDecimal(a) / Convert.ToDecimal(b);
         }
+        //Funcion para mostrar los 10 primeros numeros primos
+        static void NumerosPrimos()
+        {
+            int cont = 0;
+            for (int i = 2; i <= 30; i++)
+            {
+                for (int j = 1; j <= i; j++)
+                {
+                    if (i % j == 0)
+                    {
+                        cont = cont + 1;
+                    }
+                }
+                if (cont <= 2)
+                {
+                    Console.WriteLine("-  "+i+"  -");
+                }
+                cont = 0;
+            }
+        }
         //Procedimiento que imprime la raiz cuadrada de los 10 primero numeros
         static void Raiz()
         {
@@ -51,6 +71,7 @@ namespace prjLab01_1
                 Console.WriteLine("[3] Multiplicacion de dos numeros");
                 Console.WriteLine("[4] Division de dos numeros");
                 Console.WriteLine("[5] Imprimir la raiz cuadrada de los 10 primeros numeros enteros");
+                Console.WriteLine("[6] Imprimir los 10 primeros numero primos");
                 Console.WriteLine("[0] Salir");
                 Console.WriteLine("Ingrese una opcion y presion ENTER");
                 opcion = Console.ReadLine();
@@ -105,6 +126,11 @@ namespace prjLab01_1
                     case "5":
                         Console.WriteLine("Calculando...");
                         Raiz();
+                        Console.ReadKey();
+                        break;
+                    case "6":
+                        Console.WriteLine("Calculando los 10 primeros numero primos...");
+                        NumerosPrimos();
                         Console.ReadKey();
                         break;
                 }
