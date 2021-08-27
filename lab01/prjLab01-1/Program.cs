@@ -48,6 +48,22 @@ namespace prjLab01_1
                 cont = 0;
             }
         }
+        //Funcion para convertir de Celsius a Fahrenheit
+        static void Conversion_Temperatura(int op, int a)
+        {
+            int convertido;
+
+            if (op == 1)
+            {
+                convertido = ((9 * a) / 5) + 32;
+                Console.WriteLine("La conversion de "+ a + " Celsius a Fahrenheit es : " + convertido);
+            }
+            else {
+                convertido = (5 * (a - 32)) / 9; 
+                Console.WriteLine("La conversion de " + a + " Fahrenheit a Celsius es : " + convertido);
+            }
+
+        }
         //Procedimiento que imprime la raiz cuadrada de los 10 primero numeros
         static void Raiz()
         {
@@ -72,6 +88,7 @@ namespace prjLab01_1
                 Console.WriteLine("[4] Division de dos numeros");
                 Console.WriteLine("[5] Imprimir la raiz cuadrada de los 10 primeros numeros enteros");
                 Console.WriteLine("[6] Imprimir los 10 primeros numero primos");
+                Console.WriteLine("[7] Conversion de temperatura");
                 Console.WriteLine("[0] Salir");
                 Console.WriteLine("Ingrese una opcion y presion ENTER");
                 opcion = Console.ReadLine();
@@ -128,9 +145,23 @@ namespace prjLab01_1
                         Raiz();
                         Console.ReadKey();
                         break;
+
                     case "6":
                         Console.WriteLine("Calculando los 10 primeros numero primos...");
                         NumerosPrimos();
+                        Console.ReadKey();
+                        break;
+
+                    case "7":
+                        Console.WriteLine("Elija la opcion de conversion que desea:");
+                        Console.WriteLine("[1]Convertir de Celsius a Fahrenheit");
+                        Console.WriteLine("[2]Convertir de Fahrenheit a Celsius");
+                        Console.WriteLine("----------------------------------------");
+                        int op = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Ingrese el valor a convertir:");
+                        a = Convert.ToInt32(Console.ReadLine());
+     
+                        Conversion_Temperatura(op, a);
                         Console.ReadKey();
                         break;
                 }
