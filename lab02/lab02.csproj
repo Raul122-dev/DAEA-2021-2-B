@@ -52,10 +52,109 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="manCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manCategorias.Designer.cs">
+      <DependentUpon>manCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="manClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manClientes.Designer.cs">
+      <DependentUpon>manClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="manProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manProductos.Designer.cs">
+      <DependentUpon>manProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="manProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manProveedores.Designer.cs">
+      <DependentUpon>manProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="manUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manUsuario.Designer.cs">
+      <DependentUpon>manUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrincipalMDI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrincipalMDI.Designer.cs">
+      <DependentUpon>PrincipalMDI.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="regCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="regCompras.Designer.cs">
+      <DependentUpon>regCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="regVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="regVentas.Designer.cs">
+      <DependentUpon>regVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="repClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="repClientes.Designer.cs">
+      <DependentUpon>repClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="repCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="repCompras.Designer.cs">
+      <DependentUpon>repCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="repInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="repInventario.Designer.cs">
+      <DependentUpon>repInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="repProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="repProveedores.Designer.cs">
+      <DependentUpon>repProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="repUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="repUsuarios.Designer.cs">
+      <DependentUpon>repUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="repVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="repVentas.Designer.cs">
+      <DependentUpon>repVentas.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manClientes.resx">
+      <DependentUpon>manClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manProductos.resx">
+      <DependentUpon>manProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manProveedores.resx">
+      <DependentUpon>manProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manUsuario.resx">
+      <DependentUpon>manUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrincipalMDI.resx">
+      <DependentUpon>PrincipalMDI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -66,6 +165,30 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="regCompras.resx">
+      <DependentUpon>regCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="regVentas.resx">
+      <DependentUpon>regVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="repClientes.resx">
+      <DependentUpon>repClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="repCompras.resx">
+      <DependentUpon>repCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="repInventario.resx">
+      <DependentUpon>repInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="repProveedores.resx">
+      <DependentUpon>repProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="repUsuarios.resx">
+      <DependentUpon>repUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="repVentas.resx">
+      <DependentUpon>repVentas.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
