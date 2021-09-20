@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
-namespace Lab03
+namespace Lab04
 {
     public partial class dbConn : Form
     {
@@ -102,5 +102,7 @@ namespace Lab03
                 txtPassword.Enabled = true;
             }
         }
+
+
     }
 }

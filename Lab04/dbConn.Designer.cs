@@ -1,5 +1,5 @@
 ﻿
-namespace Lab03
+namespace Lab04
 {
     partial class dbConn
     {
