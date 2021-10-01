@@ -106,5 +106,83 @@ namespace Lab05
                 txtEnrollmentDate.Text = dgvListado.SelectedRows[0].Cells[4].Value.ToString();
             }
         }
+
+        private void btnBuscarCodigo_Click(object sender, EventArgs e)
+        {
+            con.Open();
+
+            String PersonID = txtPersonID.Text;
+            String FirstName = txtFirstName.Text;
+            String LastName = txtLastName.Text;
+            String HireDate = txtHireDate.Text;
+            String EnrollmentDate = txtEnrollmentDate.Text;
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "BuscarCodigoPersona";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = con;
+
+            SqlParameter param = new SqlParameter();
+            param.ParameterName = "@PersonID";
+            param.SqlDbType = SqlDbType.NVarChar;
+            param.Value = PersonID;
+            cmd.Parameters.Add(param);
+
+            SqlDataReader reader = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(reader);
+            dgvListado.DataSource = dt;
+            dgvListado.Refresh();
+
+            con.Close();
+        }
+
+        private void btnNombre_Click(object sender, EventArgs e)
+        {
+            con.Open();
+
+            String FirstName = txtFirstName.Text;
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "BuscarPersonaNombre";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = con;
+
+            SqlParameter param = new SqlParameter();
+            param.ParameterName = "@FirstName";
+            param.SqlDbType = SqlDbType.NVarChar;
+            param.Value = FirstName;
+            cmd.Parameters.Add(param);
+
+            SqlDataReader reader = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(reader);
+            dgvListado.DataSource = dt;
+            dgvListado.Refresh();
+        }
+
+        private void btnApellidos_Click(object sender, EventArgs e)
+        {
+            con.Open();
+
+            String LastName = txtLastName.Text;
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "BuscarApellido";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = con;
+
+            SqlParameter param = new SqlParameter();
+            param.ParameterName = "@LastName";
+            param.SqlDbType = SqlDbType.NVarChar;
+            param.Value = LastName;
+            cmd.Parameters.Add(param);
+
+            SqlDataReader reader = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(reader);
+            dgvListado.DataSource = dt;
+            dgvListado.Refresh();
+        }
     }
 }

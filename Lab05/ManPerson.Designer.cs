@@ -46,6 +46,9 @@ namespace Lab05
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnBuscarCodigo = new System.Windows.Forms.Button();
+            this.btnNombre = new System.Windows.Forms.Button();
+            this.btnApellidos = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -62,7 +65,7 @@ namespace Lab05
             // dgvListado
             // 
             this.dgvListado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListado.Location = new System.Drawing.Point(11, 224);
+            this.dgvListado.Location = new System.Drawing.Point(11, 245);
             this.dgvListado.Margin = new System.Windows.Forms.Padding(2);
             this.dgvListado.Name = "dgvListado";
             this.dgvListado.ReadOnly = true;
@@ -231,11 +234,47 @@ namespace Lab05
             this.label1.TabIndex = 0;
             this.label1.Text = "Codigo";
             // 
+            // btnBuscarCodigo
+            // 
+            this.btnBuscarCodigo.Location = new System.Drawing.Point(11, 213);
+            this.btnBuscarCodigo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscarCodigo.Name = "btnBuscarCodigo";
+            this.btnBuscarCodigo.Size = new System.Drawing.Size(89, 28);
+            this.btnBuscarCodigo.TabIndex = 18;
+            this.btnBuscarCodigo.Text = "Buscar Codigo";
+            this.btnBuscarCodigo.UseVisualStyleBackColor = true;
+            this.btnBuscarCodigo.Click += new System.EventHandler(this.btnBuscarCodigo_Click);
+            // 
+            // btnNombre
+            // 
+            this.btnNombre.Location = new System.Drawing.Point(104, 213);
+            this.btnNombre.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNombre.Name = "btnNombre";
+            this.btnNombre.Size = new System.Drawing.Size(89, 28);
+            this.btnNombre.TabIndex = 19;
+            this.btnNombre.Text = "Buscar Nombre";
+            this.btnNombre.UseVisualStyleBackColor = true;
+            this.btnNombre.Click += new System.EventHandler(this.btnNombre_Click);
+            // 
+            // btnApellidos
+            // 
+            this.btnApellidos.Location = new System.Drawing.Point(197, 213);
+            this.btnApellidos.Margin = new System.Windows.Forms.Padding(2);
+            this.btnApellidos.Name = "btnApellidos";
+            this.btnApellidos.Size = new System.Drawing.Size(94, 28);
+            this.btnApellidos.TabIndex = 20;
+            this.btnApellidos.Text = "Buscar Apellidos";
+            this.btnApellidos.UseVisualStyleBackColor = true;
+            this.btnApellidos.Click += new System.EventHandler(this.btnApellidos_Click);
+            // 
             // ManPerson
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(413, 426);
+            this.ClientSize = new System.Drawing.Size(410, 443);
+            this.Controls.Add(this.btnApellidos);
+            this.Controls.Add(this.btnNombre);
+            this.Controls.Add(this.btnBuscarCodigo);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dgvListado);
             this.Controls.Add(this.btnEliminar);
@@ -272,6 +311,9 @@ namespace Lab05
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnBuscarCodigo;
+        private System.Windows.Forms.Button btnNombre;
+        private System.Windows.Forms.Button btnApellidos;
     }
 }
 
