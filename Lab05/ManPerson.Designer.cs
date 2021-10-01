@@ -72,6 +72,7 @@ namespace Lab05
             this.dgvListado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvListado.Size = new System.Drawing.Size(393, 190);
             this.dgvListado.TabIndex = 16;
+            this.dgvListado.SelectionChanged += new System.EventHandler(this.dgvListado_SelectionChanged);
             // 
             // btnEliminar
             // 
@@ -82,6 +83,7 @@ namespace Lab05
             this.btnEliminar.TabIndex = 15;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnModificar
             // 
@@ -92,6 +94,7 @@ namespace Lab05
             this.btnModificar.TabIndex = 14;
             this.btnModificar.Text = "Modificar ";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnInsertar
             // 
@@ -102,6 +105,7 @@ namespace Lab05
             this.btnInsertar.TabIndex = 13;
             this.btnInsertar.Text = "Insertar";
             this.btnInsertar.UseVisualStyleBackColor = true;
+            this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click);
             // 
             // btnListar
             // 
@@ -112,6 +116,7 @@ namespace Lab05
             this.btnListar.TabIndex = 12;
             this.btnListar.Text = "Listar";
             this.btnListar.UseVisualStyleBackColor = true;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
             // groupBox1
             // 
@@ -240,6 +245,7 @@ namespace Lab05
             this.Controls.Add(this.groupBox1);
             this.Name = "ManPerson";
             this.Text = "Mantenimiento de Personas";
+            this.Load += new System.EventHandler(this.ManPerson_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
