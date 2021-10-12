@@ -1,7 +1,7 @@
 ﻿
 namespace Lab06
 {
-    partial class Form1
+    partial class ManPersona
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -59,6 +59,7 @@ namespace Lab06
             this.btnEliminar.TabIndex = 25;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnModificar
             // 
@@ -69,6 +70,7 @@ namespace Lab06
             this.btnModificar.TabIndex = 24;
             this.btnModificar.Text = "Modificar ";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnInsertar
             // 
@@ -79,6 +81,7 @@ namespace Lab06
             this.btnInsertar.TabIndex = 23;
             this.btnInsertar.Text = "Insertar";
             this.btnInsertar.UseVisualStyleBackColor = true;
+            this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click);
             // 
             // btnListar
             // 
@@ -89,6 +92,7 @@ namespace Lab06
             this.btnListar.TabIndex = 22;
             this.btnListar.Text = "Listar";
             this.btnListar.UseVisualStyleBackColor = true;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
             // groupBox1
             // 
@@ -214,6 +218,7 @@ namespace Lab06
             this.btnBuscar.TabIndex = 26;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // dgvListado
             // 
@@ -228,8 +233,9 @@ namespace Lab06
             this.dgvListado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvListado.Size = new System.Drawing.Size(405, 190);
             this.dgvListado.TabIndex = 27;
+            this.dgvListado.SelectionChanged += new System.EventHandler(this.dgvListado_SelectionChanged);
             // 
-            // Form1
+            // ManPersona
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -241,8 +247,9 @@ namespace Lab06
             this.Controls.Add(this.btnInsertar);
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Form1";
+            this.Name = "ManPersona";
             this.Text = "Mantenimientos de Personas";
+            this.Load += new System.EventHandler(this.ManPersona_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).EndInit();
