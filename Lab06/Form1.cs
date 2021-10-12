@@ -142,5 +142,19 @@ namespace Lab06
 
             }
         }
+
+        private void btnNombre_Click(object sender, EventArgs e)
+        {
+            DataView dv = new DataView(tablePerson);
+            dv.RowFilter = "FirstName = '" + txtFirstName.Text + "'";
+            dgvListado.DataSource = dv;
+        }
+
+        private void btnApellidos_Click(object sender, EventArgs e)
+        {
+            DataView dv = new DataView(tablePerson);
+            dv.RowFilter = "LastName = '" + txtLastName.Text + "'";
+            dgvListado.DataSource = dv;
+        }
     }
 }

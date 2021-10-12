@@ -46,6 +46,8 @@ namespace Lab06
             this.label1 = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.dgvListado = new System.Windows.Forms.DataGridView();
+            this.btnApellidos = new System.Windows.Forms.Button();
+            this.btnNombre = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).BeginInit();
             this.SuspendLayout();
@@ -235,11 +237,35 @@ namespace Lab06
             this.dgvListado.TabIndex = 27;
             this.dgvListado.SelectionChanged += new System.EventHandler(this.dgvListado_SelectionChanged);
             // 
+            // btnApellidos
+            // 
+            this.btnApellidos.Location = new System.Drawing.Point(125, 212);
+            this.btnApellidos.Margin = new System.Windows.Forms.Padding(2);
+            this.btnApellidos.Name = "btnApellidos";
+            this.btnApellidos.Size = new System.Drawing.Size(131, 28);
+            this.btnApellidos.TabIndex = 29;
+            this.btnApellidos.Text = "Buscar por Apellidos";
+            this.btnApellidos.UseVisualStyleBackColor = true;
+            this.btnApellidos.Click += new System.EventHandler(this.btnApellidos_Click);
+            // 
+            // btnNombre
+            // 
+            this.btnNombre.Location = new System.Drawing.Point(11, 212);
+            this.btnNombre.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNombre.Name = "btnNombre";
+            this.btnNombre.Size = new System.Drawing.Size(110, 28);
+            this.btnNombre.TabIndex = 28;
+            this.btnNombre.Text = "Buscar por Nombre";
+            this.btnNombre.UseVisualStyleBackColor = true;
+            this.btnNombre.Click += new System.EventHandler(this.btnNombre_Click);
+            // 
             // ManPersona
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(425, 446);
+            this.Controls.Add(this.btnApellidos);
+            this.Controls.Add(this.btnNombre);
             this.Controls.Add(this.dgvListado);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnEliminar);
@@ -276,6 +302,8 @@ namespace Lab06
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.DataGridView dgvListado;
+        private System.Windows.Forms.Button btnApellidos;
+        private System.Windows.Forms.Button btnNombre;
     }
 }
 
