@@ -27,5 +27,15 @@ namespace Presentacion
             dgDatos.DataSource = dt;
             dgDatos.Refresh();
         }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+            clsNegPerson np = new clsNegPerson();
+            dt = np.GetbyName(txtBuscar.Text);
+
+            dgDatos.DataSource = dt;
+            dgDatos.Refresh();
+        }
     }
 }
