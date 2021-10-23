@@ -13,7 +13,7 @@ namespace Datos
 
         public clsDAO()
         {
-            string str = "Server=DESKTOP-N7QSKSOI\\LOCAL;DataBase=School;Integrated Security=true;";
+            string str = "Server=DESKTOP-N7QSKSOIL;DataBase=School;Integrated Security=true;";
             con = new SqlConnection(str);
         }
     }
