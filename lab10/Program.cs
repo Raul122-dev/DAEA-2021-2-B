@@ -99,49 +99,73 @@ namespace lab10
 
 
             //Edicion de datos
-            var query = from p in context.Products
-                        where p.ProductName == "Tofu"
-                        select p;
+            //var query = from p in context.Products
+            //            where p.ProductName == "Tofu"
+            //            select p;
 
-            foreach (var prod in query)
-            {
-                Console.WriteLine("ID={0} \t Name={1} \t Price={2} \t Stok={3} \t Descontinuado={4}", prod.ProductID, prod.ProductName, prod.UnitPrice, prod.UnitsInStock, prod.Discontinued);
-            }
+            //foreach (var prod in query)
+            //{
+            //    Console.WriteLine("ID={0} \t Name={1} \t Price={2} \t Stok={3} \t Descontinuado={4}", prod.ProductID, prod.ProductName, prod.UnitPrice, prod.UnitsInStock, prod.Discontinued);
+            //}
 
-            var product = (from p in context.Products
-                           where p.ProductName == "Tofu"
-                           select p).FirstOrDefault();
+            //var product = (from p in context.Products
+            //               where p.ProductName == "Tofu"
+            //               select p).FirstOrDefault();
 
-            product.UnitPrice = 100;
-            product.UnitsInStock = 15;
-            product.Discontinued = true;
+            //product.UnitPrice = 100;
+            //product.UnitsInStock = 15;
+            //product.Discontinued = true;
 
-            context.SubmitChanges();
+            //context.SubmitChanges();
 
-            var query2 = from p2 in context.Products
-                        where p2.ProductName == "Tofu"
-                        select p2;
+            //var query2 = from p2 in context.Products
+            //            where p2.ProductName == "Tofu"
+            //            select p2;
 
-            foreach (var prod2 in query2)
-            {
-                Console.WriteLine("ID={0} \t Name={1} \t Price={2} \t Stok={3} \t Descontinuado={4}", prod2.ProductID, prod2.ProductName, prod2.UnitPrice, prod2.UnitsInStock, prod2.Discontinued);
-            }
+            //foreach (var prod2 in query2)
+            //{
+            //    Console.WriteLine("ID={0} \t Name={1} \t Price={2} \t Stok={3} \t Descontinuado={4}", prod2.ProductID, prod2.ProductName, prod2.UnitPrice, prod2.UnitsInStock, prod2.Discontinued);
+            //}
 
             //Eliminacion de datos
-            var productEliminar = (from pr3 in context.Products
-                           where pr3.ProductID == 78
-                           select pr3).FirstOrDefault();
+            //var productEliminar = (from pr3 in context.Products
+            //               where pr3.ProductID == 78
+            //               select pr3).FirstOrDefault();
 
-            context.Products.DeleteOnSubmit(productEliminar);
-            context.SubmitChanges();
+            //context.Products.DeleteOnSubmit(productEliminar);
+            //context.SubmitChanges();
 
-            var queryEliminar = from pr4 in context.Products
-                        where pr4.CategoryID == 1
-                        select pr4;
+            //var queryEliminar = from pr4 in context.Products
+            //            where pr4.CategoryID == 1
+            //            select pr4;
 
-            foreach (var prod4 in query)
+            //foreach (var prod4 in queryEliminar)
+            //{
+            //    Console.WriteLine("ID={0} \t Name={1}", prod4.ProductID, prod4.ProductName);
+            //}
+
+            //Listado de id, nombre del producto, nombre del provedor, productos de los productos de la categoria "Dairy productos"
+            //var query = from p in context.Products
+            //            join s in context.Suppliers on p.SupplierID equals s.SupplierID into productSupp
+            //            from ps in productSupp.DefaultIfEmpty()
+            //            join c in context.Categories on p.CategoryID equals c.CategoryID
+            //            where c.CategoryName == "Dairy Products"
+            //            select new { idProd = p.ProductID, ProName = p.ProductName, SuppName = ps.CompanyName, catname = c.CategoryName };
+
+            //foreach (var ls in query)
+            //{
+            //    Console.WriteLine("ID={0} \t NameProducto={1} \t NameSupplier={2} \t NameCat={3}", ls.idProd, ls.ProName, ls.SuppName, ls.catname);
+            //}
+
+            //Listar los productos de los proveedores ubicados en USA
+            var query2 = from p in context.Products
+                         join s in context.Suppliers on p.CategoryID equals s.SupplierID
+                         where s.Country == "USA"
+                         select new { idProd = p.ProductID, prodname = p.ProductName, SuppCountry = s.Country };
+
+            foreach (var ls in query2)
             {
-                Console.WriteLine("ID={0} \t Name={1}", prod4.ProductID, prod4.ProductName);
+                Console.WriteLine("ID={0} \t NameProducto={1} \t SuppliersCountry={2}", ls.idProd, ls.prodname, ls.SuppCountry);
             }
 
             Console.ReadKey();
