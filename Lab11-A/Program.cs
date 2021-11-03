@@ -170,24 +170,39 @@ namespace Lab11_A
             //    Console.ReadKey();
             //}
 
+            //using (AdventureWorksEntities context = new AdventureWorksEntities())
+            //{
+            //    var products = context.Product;
+            //    var query = from product in products
+            //                group product by product.Color into g
+            //                select new
+            //                {
+            //                    Color = g.Key,
+            //                    ProductCount = g.Count()
+            //                };
+            //    foreach (var product in query)
+            //    {
+            //        Console.WriteLine("Color = {0} \t Cantidad = {1}", product.Color, product.ProductCount);
+            //    }
+            //    Console.ReadKey();
+            //}
+
             using (AdventureWorksEntities context = new AdventureWorksEntities())
             {
-                var products = context.Product;
-                var query = from product in products
-                            group product by product.Color into g
+                var orders = context.SalesOrderHeader;
+                var query = from order in orders
+                            group order by order.SalesPersonID into g
                             select new
                             {
-                                Color = g.Key,
-                                ProductCount = g.Count()
+                                Category = g.Key,
+                                maxTotalDue = g.Max(order => order.TotalDue)
                             };
-                foreach (var product in query)
+                foreach (var order in query)
                 {
-                    Console.WriteLine("Color = {0} \t Cantidad = {1}", product.Color, product.ProductCount);
+                    Console.WriteLine("PersonalID = {0} \t TotalID = {1}", order.Category, order.maxTotalDue);
                 }
                 Console.ReadKey();
             }
-
-
         }
     }
 }
