@@ -1,0 +1,16 @@
+﻿@model List<lab15.Models.Person>
+@{
+    ViewBag.Title = "Listar";
+    var grid = new WebGrid(source: Model, columnNames: new[]
+    {
+        "PersonID","FirstName","LastName","EnrollmentDate","HireDate"
+    });
+}
+
+<h2>Listado de Personas</h2>
+@Html.ActionLink("Reporte", "Reporte", null, new { @class = "btn btn-primary" })
+@Html.ActionLink("Graficos", "Graficos", null, new { @class = "btn btn-danger" })
+
+
+@grid.GetHtml(tableStyle: "table table-striped")
+
