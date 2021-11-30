@@ -1,0 +1,43 @@
+﻿@model Prestamos
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>¿Desea Eliminar el Registro?</h3>
+
+<h4>Prestamos</h4>
+
+<div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">@Html.DisplayNameFor(model => model.IdPrestamo)</label>
+    <label for="exampleFormControlInput1" class="form-label">@Html.DisplayFor(model => model.IdPrestamo)</label>
+</div>
+
+<div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">@Html.DisplayNameFor(model => model.IdLibro)</label>
+    <label for="exampleFormControlInput1" class="form-label">@Html.DisplayFor(model => model.IdLibro)</label>
+</div>
+
+<div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">@Html.DisplayNameFor(model => model.IdUsuario)</label>
+    <label for="exampleFormControlInput1" class="form-label">@Html.DisplayFor(model => model.IdUsuario)</label>
+</div>
+
+<div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">@Html.DisplayNameFor(model => model.FecPrestamo)</label>
+    <label for="exampleFormControlInput1" class="form-label">@Html.DisplayFor(model => model.FecPrestamo)</label>
+</div>
+
+<div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">@Html.DisplayNameFor(model => model.FecDevolucion)</label>
+    <label for="exampleFormControlInput1" class="form-label">@Html.DisplayFor(model => model.FecDevolucion)</label>
+</div>
+
+@using (Html.BeginForm())
+{
+    <div class="col-auto">
+        <input type="submit" class="btn btn-primary" value="Delete" /> |
+        @Html.ActionLink("Retornar a Index", "Index")
+    </div>
+}

@@ -1,0 +1,50 @@
+﻿@model Prestamos
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+
+    <h4>Prestamos</h4>
+
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">@Html.LabelFor(model => model.IdPrestamo)</label>
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">@Html.LabelFor(model => model.IdLibro)</label>
+        @Html.EditorFor(model => model.IdLibro)
+        @Html.ValidationMessageFor(model => model.IdLibro)
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">@Html.LabelFor(model => model.IdUsuario)</label>
+        @Html.EditorFor(model => model.IdUsuario)
+        @Html.ValidationMessageFor(model => model.IdUsuario)
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">@Html.LabelFor(model => model.FecPrestamo)</label>
+        @Html.EditorFor(model => model.FecPrestamo)
+        @Html.ValidationMessageFor(model => model.FecPrestamo)
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">@Html.LabelFor(model => model.FecDevolucion)</label>
+        @Html.EditorFor(model => model.FecDevolucion)
+        @Html.ValidationMessageFor(model => model.FecDevolucion)
+    </div>
+
+    <div class="col-auto">
+        <input type="submit" class="btn btn-primary" value="Create">
+    </div>
+
+}
+
+<div>
+    @Html.ActionLink("Retornar a Index", "Index")
+</div>

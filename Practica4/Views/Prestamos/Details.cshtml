@@ -1,0 +1,64 @@
+﻿@model IEnumerable<Practica4.Libro>
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<p>
+    @Html.ActionLink("Crear un nuevo Prestamo", "Create")
+</p>
+
+<table class="table table-bordered border-primary">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IdLibro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Codigo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Titulo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ISBN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Editorial)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumPags)
+        </th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdLibro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Codigo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Titulo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ISBN)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Editorial)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumPags)
+            </td>
+            <td>
+                @*
+                    @Html.ActionLink("Edit", "Edit", new { id = item.PrimaryKey }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.PrimaryKey }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.PrimaryKey })
+                *@
+            </td>
+        </tr>
+    }
+</table>

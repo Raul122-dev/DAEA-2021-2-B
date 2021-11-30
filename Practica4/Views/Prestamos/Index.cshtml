@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Practica4.Prestamos>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Nuevo Prestamo", "Create")
+</p>
+
+<table class="table table-sm">
+    <thead class="table-light">
+        <th>
+            @Html.DisplayNameFor(model => model.IdPrestamo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdLibro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdUsuario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FecPrestamo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FecDevolucion)
+        </th>
+        <th>
+        </th>
+    </thead>
+
+    @foreach (var item in Model)
+    {
+        <tbody>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdPrestamo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdLibro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdUsuario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FecPrestamo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FecDevolucion)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.IdPrestamo }) |
+                @Html.ActionLink("Detalles", "Details", new { id = item.IdPrestamo }) |
+                @Html.ActionLink("Borrar", "Delete", new { id = item.IdPrestamo })
+            </td>
+        </tbody>
+    }
+</table>
